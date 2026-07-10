@@ -1,0 +1,14 @@
+[run]
+experiment = "ablation_tau_sweep"
+seeds = [0, 1, 2, 3, 4]
+bootstrap_iters = 10000
+baseline_orr = 0.20
+cohorts = ["TCGA", "IMvigor210", "OAK", "UKB-CMR", "CARDIOTOX_CARDIOCARE"]
+enabled_agents = ["omics", "immune", "cardio", "planner", "monitor"]
+tool_layer_enabled = true
+
+[kernel]
+tau = 0.082
+
+[sweep]
+tau_values = [0.025, 0.05, 0.075, 0.10, 0.15, 0.20, 0.30, 0.50]

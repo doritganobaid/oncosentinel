@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fm-mapb"
+version = "0.1.0"
+description = "Foundation-Model Multi-Agent Pareto-Bayesian orchestrator for joint ICI efficacy and cardiotoxicity decision support"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+keywords = [
+  "agentic-ai",
+  "cardio-oncology",
+  "pareto-bayesian",
+  "immune-checkpoint-inhibitor",
+  "multi-agent-orchestration",
+]
+dependencies = [
+  "torch==2.4.*",
+  "numpy==1.26.*",
+  "scipy>=1.11",
+  "scikit-learn==1.5.*",
+  "click>=8.1",
+  "attrs>=23.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "ruff>=0.6",
+  "black>=24",
+  "isort>=5.13",
+  "mypy>=1.11",
+  "pre-commit>=3.7",
+]
+
+[project.scripts]
+fm-mapb = "oncosentinel.__main__:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+oncosentinel = ["py.typed"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "SIM", "PL"]
+ignore = ["PLR0913", "PLR2004", "PLR0911", "PLR0912", "PLR0915"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["oncosentinel"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["oncosentinel"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+plugins = []
+files = ["src/oncosentinel"]
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*", "scipy.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,8 @@
+[run]
+experiment = "ablation_drop_immune"
+seeds = [0, 1, 2, 3, 4]
+bootstrap_iters = 10000
+baseline_orr = 0.20
+cohorts = ["TCGA", "IMvigor210", "OAK", "UKB-CMR", "CARDIOTOX_CARDIOCARE"]
+enabled_agents = ["omics", "cardio", "planner", "monitor"]
+tool_layer_enabled = true

@@ -1,0 +1,53 @@
+[[cohort]]
+name = "TCGA"
+n_cases = 4218
+n_cancer_types = 33
+modality = "multi-omics"
+license = "open"
+access_url = "portal.gdc.cancer.gov"
+seed = 1
+
+[[cohort]]
+name = "IMvigor210"
+n_cases = 298
+n_cancer_types = 1
+modality = "omics+clinical"
+license = "open"
+access_url = "ESMO-Open-supplement"
+seed = 2
+
+[[cohort]]
+name = "OAK"
+n_cases = 850
+n_cancer_types = 1
+modality = "omics+clinical"
+license = "open"
+access_url = "published-supplement"
+seed = 3
+
+[[cohort]]
+name = "UKB-CMR"
+n_cases = 4612
+n_cancer_types = 1
+modality = "cardiac-mri"
+license = "restricted"
+access_url = "ukbiobank.ac.uk"
+seed = 4
+
+[[cohort]]
+name = "CARDIOTOX_CARDIOCARE"
+n_cases = 421
+n_cancer_types = 1
+modality = "multi-vendor-echo"
+license = "CC-BY-NC"
+access_url = "zenodo.org/records/19727929"
+seed = 5
+
+[[cohort]]
+name = "MIMIC-IV-ECG"
+n_cases = 2741
+n_cancer_types = 1
+modality = "ecg"
+license = "restricted"
+access_url = "physionet.org"
+seed = 6

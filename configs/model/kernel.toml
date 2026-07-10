@@ -1,0 +1,18 @@
+[kernel]
+tau = 0.10
+tau_star = 0.082
+alpha = 0.10
+coverage_delta = 0.10
+reference = [0.0, 0.0]
+
+[priors]
+resp_mean = 0.50
+resp_var = 0.04
+lvef_mu = 0.15
+lvef_var = 0.02
+
+[mcid]
+orr_pp = 10.0
+pfs_hr = 0.75
+lvef_drop_pp = 10.0
+troponin_percentile = 99.0

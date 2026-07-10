@@ -1,0 +1,14 @@
+# for unit-test smoke only; do not use for reporting
+[run]
+experiment = "_smoke"
+seeds = [0]
+bootstrap_iters = 50
+baseline_orr = 0.20
+cohorts = ["TCGA"]
+enabled_agents = ["omics", "immune", "cardio", "planner", "monitor"]
+tool_layer_enabled = true
+
+[calibration]
+steps = 2
+warmup_steps = 1
+batch_size = 8

@@ -1,0 +1,7 @@
+[compute]
+world_size = 8
+device = "A100-80GB"
+backbone_precision = "bf16"
+kernel_precision = "fp32"
+gpu_hours = 187.0
+inference_seconds = 22.0

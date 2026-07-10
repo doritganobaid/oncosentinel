@@ -1,0 +1,12 @@
+[run]
+experiment = "supplementary_loco_cv"
+seeds = [0, 1, 2, 3, 4]
+bootstrap_iters = 10000
+baseline_orr = 0.20
+cohorts = ["TCGA", "IMvigor210", "OAK", "UKB-CMR", "CARDIOTOX_CARDIOCARE"]
+enabled_agents = ["omics", "immune", "cardio", "planner", "monitor"]
+tool_layer_enabled = true
+
+[loco]
+holdout_cohorts = ["TCGA", "IMvigor210", "OAK", "UKB-CMR", "CARDIOTOX_CARDIOCARE"]
+total_variation_envelope = 0.08

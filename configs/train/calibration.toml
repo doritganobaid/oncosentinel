@@ -1,0 +1,10 @@
+[calibration]
+optimizer = "adamw"
+lr = 2e-4
+scheduler = "cosine"
+warmup = "linear"
+weight_decay = 0.01
+lora_rank = 8
+batch_size = 32
+steps = 200
+warmup_steps = 20

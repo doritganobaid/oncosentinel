@@ -1,0 +1,7 @@
+[backbone]
+concentration = 5.25
+
+[backbone.weights]
+BulkRNABert = 0.46
+scGPT_v2 = 0.42
+Geneformer_v2 = 0.12
